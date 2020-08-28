@@ -6,16 +6,10 @@ import {throwError} from "rxjs/index";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
-// platformBrowserDynamic()
-//   .bootstrapModule(AppModule)
-//   .then(success => console.log(`Bootstrap success`))
-//   .catch(err => console.error(err));
-
 export class AppComponent {
-  title = 'sentryDemo';
+  title = 'myTestApp';
 
-  onClickMe() {
-    console.error('Test error');
+  onMyClick() {
+    throw throwError({error: 'Test error'});
   }
 }
